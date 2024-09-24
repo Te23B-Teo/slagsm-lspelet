@@ -4,6 +4,8 @@ int hp2 = 100;
 string namn;
 string response;
 string level;
+int nummer = 21;
+int nummer2 = 21;
 Console.WriteLine("hej främling vad heter du?");
 namn = Console.ReadLine();
 Console.Clear();
@@ -11,19 +13,25 @@ Console.WriteLine($"{namn} du är vårat ända hopp och vi behöver din hjälp a
 Thread.Sleep(2000);
 Console.WriteLine("tryck på enter");
 Console.ReadLine();
-
-while(true){
 Console.WriteLine("vilken nivå vill du köra 1 2 eller 3");
 level = Console.ReadLine();
 if (level == "1"){
+nummer = 10;
+nummer = 10;
 }
-int p1damage = Random.Shared.Next(0,21);
-int p2damage = Random.Shared.Next(0,21);
+else if(level == "3"){
+    nummer = 10;
+    nummer2 = 10;
+}
+
+while(true){
+int p1damage = Random.Shared.Next(0,nummer);
+int p2damage = Random.Shared.Next(0,nummer2);
 
 if (p1damage == p2damage){
 hp1 += 10;
 hp2 += 10;
-Console.WriteLine("Både du och skurken fick +10 HP för b!");
+Console.WriteLine("Både du och skurken fick +10 HP för båda fick licka mycket skada!");
 Thread.Sleep(2000);
 }
 else if(hp1 > 0 && hp2 > 0){
@@ -57,4 +65,7 @@ break;
         break;
     }
     Console.Clear(); 
+}
+void variablar(){
+    
 }

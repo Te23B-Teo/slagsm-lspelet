@@ -12,3 +12,4 @@ C:\Users\teo.erfassjosefsson\programering 1 med mikael\slagsmålspelet\slagsmål
 C:\Users\teo.erfassjosefsson\programering 1 med mikael\slagsmålspelet\slagsmålsspelet\obj\Debug\net8.0\slagsmålsspelet.pdb
 C:\Users\teo.erfassjosefsson\programering 1 med mikael\slagsmålspelet\slagsmålsspelet\obj\Debug\net8.0\slagsmålsspelet.genruntimeconfig.cache
 C:\Users\teo.erfassjosefsson\programering 1 med mikael\slagsmålspelet\slagsmålsspelet\obj\Debug\net8.0\ref\slagsmålsspelet.dll
+C:\Users\teo.erfassjosefsson\programering 1 med mikael\slagsmålspelet\slagsmålsspelet\obj\Debug\net8.0\slagsmålsspelet.sourcelink.json
