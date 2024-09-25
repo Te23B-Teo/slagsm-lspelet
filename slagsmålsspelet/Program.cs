@@ -13,15 +13,16 @@ Console.WriteLine($"{namn} du är vårat ända hopp och vi behöver din hjälp a
 Thread.Sleep(2000);
 Console.WriteLine("tryck på enter");
 Console.ReadLine();
-Console.WriteLine("vilken nivå vill du köra 1 2 eller 3");
+Console.Clear();
+Console.WriteLine("vilken nivå vill du köra 1 som är easy 2 som är medium eller 3 som är hard");
 level = Console.ReadLine();
 if (level == "1"){
-nummer = 10;
-nummer = 10;
+nummer = 30;
+nummer2 = 15;
 }
 else if(level == "3"){
-    nummer = 10;
-    nummer2 = 10;
+    nummer = 15;
+    nummer2 = 30;
 }
 
 while(true){
@@ -42,6 +43,10 @@ Console.Clear();
     Console.WriteLine($"du har {hp1} hp kvar och skurken har {hp2} hp kvar");
     Console.ReadLine();
 }
+else if(hp1 < 0 && hp2 < 0){
+    Console.WriteLine("både du och skurken döda varandra på sista slaget");
+    Console.WriteLine("byborna tackar din uppofring");
+}
 else if(hp1 <= 0){
 Console.Clear();
 Console.WriteLine("åh nej du förlorade och skurken vann");
@@ -58,14 +63,38 @@ break;
  }
  }
     Console.WriteLine("Vill du spela igen? ja/nej");
+    Console.ForegroundColor = ConsoleColor.Black;
+    Console.WriteLine("skriv secret för en secret");
+    Console.ForegroundColor = ConsoleColor.White;
     response = Console.ReadLine().ToLower();
 
-    if (response != "ja"){
+    if (response == "nej"){
         Console.WriteLine("Tack för att du spelade! Hej då!");
+        Console.Clear();
+        Thread.Sleep(1000);
         break;
     }
-    Console.Clear(); 
+    else if (response == "ja"){
+        Console.Clear();
+    }
+   else if (response == "secret"){
+Console.Clear();
+int randomnummer = Random.Shared.Next(0,11);
+Console.WriteLine("du väntade på vad inget, nä du väntade på det här, kul för dig om du gissar en siffra från 1-10 rätt så får du 10 000 $");
+string saker = Console.ReadLine();
+Console.Clear();
+if(saker == randomnummer.ToString()){
+    Console.WriteLine("grattis du gissade rätt och fick 10 000 dollar woho");
+    Thread.Sleep(2000);
+    break;
 }
-void variablar(){
-    
+else if (saker != randomnummer.ToString()){
+    Console.WriteLine("du hade fel och nu sprängs din dator!");
+    Thread.Sleep(2000);
+    break;
+}
+}
+else if (response != "ja" || response != "secret" || response != "nej"){
+    break;
+}
 }
